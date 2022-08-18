@@ -75,5 +75,11 @@ namespace CryptoProject.Views
                 i++;
             }
         }
+
+        private async void Search(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new SearchPage());
+
+        }
     }
 }

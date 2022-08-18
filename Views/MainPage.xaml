@@ -37,6 +37,7 @@
         <StackPanel Grid.Row="0">
 
         </StackPanel>
+        <Button x:Name="ButtonSearch" Click="Search" Content="Search" Grid.Column="4" Grid.Row="0" Margin="5,2,5,2"/>
 
         <Button x:Name="ButtonRefresh" Click="RefreshAsync" Content="Refresh" Grid.Column="5" Grid.Row="0" Margin="5,2,5,2"/>
         <Label x:Name="NameCoin1" Grid.Column="0" Grid.Row="1" Content="Bitcoin"/>

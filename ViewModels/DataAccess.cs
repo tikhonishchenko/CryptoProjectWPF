@@ -22,9 +22,9 @@ namespace CryptoProject
                 var parsedObject = JObject.Parse(await response.Content.ReadAsStringAsync());
                 cryptocurrency = JsonConvert.DeserializeObject<Cryptocurrency>
                     (parsedObject["asset"].ToString());
-            }
+                cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.asset_id);
 
-            cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.asset_id);
+            }
             return cryptocurrency;
         }
 
@@ -71,12 +71,16 @@ namespace CryptoProject
                 var parsedObject = JObject.Parse(await response.Content.ReadAsStringAsync());
                 cryptocurrency = JsonConvert.DeserializeObject<CryptocurrencyObject>
                     (parsedObject["data"].ToString());
+                cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.symbol);
+
             }
 
-            cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.symbol);
+            if(cryptocurrency != null)
+            {
+                return ToDefault(cryptocurrency);
 
-
-            return ToDefault(cryptocurrency);
+            }
+            return null;
         }
         public static async Task<List<Cryptocurrency>> GetCryptocurrenciesAsync(int size)
         {

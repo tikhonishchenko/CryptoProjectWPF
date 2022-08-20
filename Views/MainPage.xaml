@@ -8,15 +8,15 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
     <Page.Resources>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#000018"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5" />
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <ControlTemplate x:Key="RoundedButton" TargetType="{x:Type ButtonBase}">
-            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1px" CornerRadius="20" SnapsToDevicePixels="true">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1px" CornerRadius="10" SnapsToDevicePixels="true">
                 <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Border>
             <ControlTemplate.Triggers>
@@ -40,7 +40,7 @@
         </ControlTemplate>
     </Page.Resources>
 
-    <Grid Margin="10" Background="Aqua">
+    <Grid Margin="10" Background="#000018" >
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*" />
@@ -69,69 +69,69 @@
         <StackPanel Grid.Row="0">
 
         </StackPanel>
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonSearch" Click="Search" Content="Search"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="0" Margin="5,2,5,2"/>
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonSearch" Click="Search" Content="Search"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="0" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
 
-        <Button  Template="{DynamicResource RoundedButton}" x:Name="ButtonRefresh"  Click="RefreshAsync" Content="Refresh"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="5,5,5,5" VerticalAlignment="Stretch"/>
-        <Label x:Name="NameCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails1" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="1" Margin="5,2,5,2" />
-        <Label x:Name="NameCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails2" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="2" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails3" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="3" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails4" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="4" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails5" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="5" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails6" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="6" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails7" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="7" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails8" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="8" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails9" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="9" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="TickerCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="VolumeCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="PriceCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" />
-        <Label x:Name="ChangeCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" />
-        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails10" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="10" Margin="5,2,5,2"/>
+        <Button  Template="{DynamicResource RoundedButton}"  x:Name="ButtonRefresh"  Click="RefreshAsync" Content="Refresh"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails1" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="1" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF"  />
+        <Label x:Name="NameCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin2"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="2" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails2" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="2" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin3"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="3" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails3" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="3" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin4"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="4" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails4" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="4" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin5"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="5" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails5" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="5" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin6"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="6" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails6" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="6" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin7"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="7" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails7" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="7" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin8"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="8" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails8" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="8" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin9"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="9" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails9" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="9" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
+        <Label x:Name="NameCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="TickerCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="VolumeCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="2" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="PriceCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="3" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Label x:Name="ChangeCoin10"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="10" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
+        <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonDetails10" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="10" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
 
 
 

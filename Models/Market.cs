@@ -10,5 +10,6 @@ namespace CryptoProject
     {
         public string Name;
         public string priceQuote;
+        public string Link;
     }
 }

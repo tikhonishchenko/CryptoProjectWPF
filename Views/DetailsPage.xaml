@@ -7,8 +7,39 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DetailsPage">
-
-    <Grid Background="White">
+    <Page.Resources>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF8D41FF"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#000018"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5" />
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <ControlTemplate x:Key="RoundedButton" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1px" CornerRadius="10" SnapsToDevicePixels="true">
+                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="true">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid Background="#000018">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*" />
@@ -23,14 +54,15 @@
 
 
         </Grid.RowDefinitions>
-        <Label x:Name="NameCoin" Grid.Row="0" Content="" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="TickerCoin" Grid.Row="1" Content="" FontSize="24px" Foreground="Purple" />
-        <Label x:Name="VolumeCoin" Grid.Row="2" Content="" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="PriceCoin"  Grid.Row="3" Content="" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="ChangeCoin" Grid.Row="4" Content="" FontSize="24px" Foreground="Purple"/>
-        <Label  Grid.Row="5" Content="Markets" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="Market1" Grid.Row="6" Content="" FontSize="24px" Foreground="Orange"/>
-        <Label x:Name="Market2" Grid.Row="7" Content="" FontSize="24px" Foreground="Green"/>
-        <Label x:Name="Market3" Grid.Row="8" Content="" FontSize="24px" Foreground="Blue"/>
+        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24px" x:Name="placeholder" Foreground="White">No info here right now...</Label>
+        <Label x:Name="NameCoin" Grid.Row="0" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="TickerCoin" Grid.Row="1" Content="" FontSize="24px" Foreground="White" />
+        <Label x:Name="VolumeCoin" Grid.Row="2" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="PriceCoin"  Grid.Row="3" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="ChangeCoin" Grid.Row="4" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="Market1" Grid.Row="6" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="Market2" Grid.Row="7" Content="" FontSize="24px" Foreground="White"/>
+        <Label x:Name="Market3" Grid.Row="8" Content="" FontSize="24px" Foreground="White"/>
+        <Button  Template="{DynamicResource RoundedButton}"  x:Name="ButtonRefresh"  Click="MainMenu" Content="Main menu"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="650,5,20,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" HorizontalAlignment="Stretch" />
     </Grid>
 </Page>

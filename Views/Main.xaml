@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:CryptoProject.Views"
         mc:Ignorable="d"
         Title="Main" Height="450" Width="800">
-    <Grid>
-        <Frame x:Name="Frame">
+    <Grid Background="#000018">
+        <Frame x:Name="Frame" Opacity="{Binding FrameOpacity}">
             
         </Frame>
     </Grid>

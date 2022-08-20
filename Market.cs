@@ -9,7 +9,6 @@ namespace CryptoProject
     internal class Market
     {
         public string Name;
-        public string Price;
-        public string Image;
+        public string priceQuote;
     }
 }

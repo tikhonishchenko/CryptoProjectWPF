@@ -16,12 +16,21 @@
             <RowDefinition Height="0.2*" />
             <RowDefinition Height="0.2*" />
             <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.2*" />
+
 
         </Grid.RowDefinitions>
-        <Label x:Name="NameCoin" Grid.Row="0" Content="Bitcoin" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="TickerCoin" Grid.Row="1" Content="BTC" FontSize="24px" Foreground="Purple" />
-        <Label x:Name="VolumeCoin" Grid.Row="2" Content="75,191.61M" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="PriceCoin"  Grid.Row="3" Content="$23,394.07" FontSize="24px" Foreground="Purple"/>
-        <Label x:Name="ChangeCoin" Grid.Row="4" Content="-3,59%" FontSize="24px" Foreground="Purple"/>
+        <Label x:Name="NameCoin" Grid.Row="0" Content="" FontSize="24px" Foreground="Purple"/>
+        <Label x:Name="TickerCoin" Grid.Row="1" Content="" FontSize="24px" Foreground="Purple" />
+        <Label x:Name="VolumeCoin" Grid.Row="2" Content="" FontSize="24px" Foreground="Purple"/>
+        <Label x:Name="PriceCoin"  Grid.Row="3" Content="" FontSize="24px" Foreground="Purple"/>
+        <Label x:Name="ChangeCoin" Grid.Row="4" Content="" FontSize="24px" Foreground="Purple"/>
+        <Label  Grid.Row="5" Content="Markets" FontSize="24px" Foreground="Purple"/>
+        <Label x:Name="Market1" Grid.Row="6" Content="" FontSize="24px" Foreground="Orange"/>
+        <Label x:Name="Market2" Grid.Row="7" Content="" FontSize="24px" Foreground="Green"/>
+        <Label x:Name="Market3" Grid.Row="8" Content="" FontSize="24px" Foreground="Blue"/>
     </Grid>
 </Page>

@@ -13,7 +13,7 @@ namespace CryptoProject
         public double price;
         public double volume_24h;
         public double change_24h;
-        public Market[] Markets;
+        public List<Market> Markets = new List<Market>();
 
 
 

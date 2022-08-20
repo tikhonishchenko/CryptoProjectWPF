@@ -31,17 +31,27 @@ namespace CryptoProject.Views
             {
                 coin = await DataAccess.GetCryptocurrencyNameAsync(Name.ToLower());
             }
+            int i = 1;
+            foreach (Market market in coin.Markets)
+            {
+                Label marketLabel = (Label)this.FindName("Market" + i);
+                marketLabel.Content = market.Name+": 1 " + coin.asset_id + " = " + market.priceQuote + " USDT";
+                i++;
+            }
             Label name = (Label)this.FindName("NameCoin");
             Label ticker = (Label)this.FindName("TickerCoin");
             Label volume = (Label)this.FindName("VolumeCoin");
             Label price = (Label)this.FindName("PriceCoin");
             Label change = (Label)this.FindName("ChangeCoin");
+
+
             name.Content = coin.name;
             ticker.Content = coin.asset_id;
             volume.Content = Math.Round(coin.volume_24h / 1000000, 2) + "M";
             if (coin.price > 10)
             {
                 price.Content = Math.Round(coin.price, 2);
+
             }
             else if (coin.price > 0.001)
             {
@@ -50,7 +60,6 @@ namespace CryptoProject.Views
             else
             {
                 price.Content = Math.Round(coin.price, 10);
-
             }
             price.Content = "$ " + price.Content;
             if (coin.change_24h >= 0)

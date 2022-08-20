@@ -23,8 +23,44 @@ namespace CryptoProject
                 cryptocurrency = JsonConvert.DeserializeObject<Cryptocurrency>
                     (parsedObject["asset"].ToString());
             }
+
+            cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.asset_id);
             return cryptocurrency;
         }
+
+        private static async Task<List<Market>> GetExchangesAsync(string asset_id)
+        {
+            string[] exchanges = new string[7] { "binance", "kucoin", "kraken", "huobi", "bitfinex", "gate", "whitebit" };
+            List<Market> marketsToReturn = new List<Market>();
+            foreach (string change in exchanges)
+            {
+                if (marketsToReturn.Count < 3)
+                {
+                    string path = "https://api.coincap.io/v2/markets?exchangeId=" + change + "&baseSymbol=" + asset_id + "&quoteSymbol=USDT";
+                    HttpResponseMessage response = await client.GetAsync(path);
+                    Market market = new Market();
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var parsedObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+                        List<Market> markets = JsonConvert.DeserializeObject<List<Market>>
+                            (parsedObject["data"].ToString());
+                        if(markets.Count!=0)
+                        {
+                            market = markets.ToArray()[0];
+                            market.Name = change.First().ToString().ToUpper() + change.Substring(1);
+                            marketsToReturn.Add(market);
+                        }
+                    }
+
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return marketsToReturn;
+        }
+
         public static async Task<Cryptocurrency> GetCryptocurrencyNameAsync(string name)
         {
             string path = "https://api.coincap.io/v2/assets/" + name;
@@ -36,6 +72,10 @@ namespace CryptoProject
                 cryptocurrency = JsonConvert.DeserializeObject<CryptocurrencyObject>
                     (parsedObject["data"].ToString());
             }
+
+            cryptocurrency.Markets = await GetExchangesAsync(cryptocurrency.symbol);
+
+
             return ToDefault(cryptocurrency);
         }
         public static async Task<List<Cryptocurrency>> GetCryptocurrenciesAsync(int size)

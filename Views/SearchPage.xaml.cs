@@ -27,6 +27,7 @@ namespace CryptoProject.Views
 
         private void Search(object sender, RoutedEventArgs e)
         {
+
             this.NavigationService.Navigate(new DetailsPage(SearchBar.Text));
         }
 

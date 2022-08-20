@@ -40,66 +40,66 @@
         <Button x:Name="ButtonSearch" Click="Search" Content="Search" Grid.Column="4" Grid.Row="0" Margin="5,2,5,2"/>
 
         <Button x:Name="ButtonRefresh" Click="RefreshAsync" Content="Refresh" Grid.Column="5" Grid.Row="0" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin1" Grid.Column="0" Grid.Row="1" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin1" Grid.Column="1" Grid.Row="1" Content="BTC"/>
-        <Label x:Name="VolumeCoin1" Grid.Column="2" Grid.Row="1" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin1" Grid.Column="3" Grid.Row="1" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin1" Grid.Column="4" Grid.Row="1" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails1" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="1" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin2" Grid.Column="0" Grid.Row="2" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin2" Grid.Column="1" Grid.Row="2" Content="BTC"/>
-        <Label x:Name="VolumeCoin2" Grid.Column="2" Grid.Row="2" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin2" Grid.Column="3" Grid.Row="2" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin2" Grid.Column="4" Grid.Row="2" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails2" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="2" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin3" Grid.Column="0" Grid.Row="3" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin3" Grid.Column="1" Grid.Row="3" Content="BTC"/>
-        <Label x:Name="VolumeCoin3" Grid.Column="2" Grid.Row="3" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin3" Grid.Column="3" Grid.Row="3" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin3" Grid.Column="4" Grid.Row="3" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails3" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="3" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin4" Grid.Column="0" Grid.Row="4" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin4" Grid.Column="1" Grid.Row="4" Content="BTC"/>
-        <Label x:Name="VolumeCoin4" Grid.Column="2" Grid.Row="4" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin4" Grid.Column="3" Grid.Row="4" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin4" Grid.Column="4" Grid.Row="4" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails4" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="4" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin5" Grid.Column="0" Grid.Row="5" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin5" Grid.Column="1" Grid.Row="5" Content="BTC"/>
-        <Label x:Name="VolumeCoin5" Grid.Column="2" Grid.Row="5" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin5" Grid.Column="3" Grid.Row="5" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin5" Grid.Column="4" Grid.Row="5" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails5" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="5" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin6" Grid.Column="0" Grid.Row="6" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin6" Grid.Column="1" Grid.Row="6" Content="BTC"/>
-        <Label x:Name="VolumeCoin6" Grid.Column="2" Grid.Row="6" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin6" Grid.Column="3" Grid.Row="6" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin6" Grid.Column="4" Grid.Row="6" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails6" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="6" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin7" Grid.Column="0" Grid.Row="7" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin7" Grid.Column="1" Grid.Row="7" Content="BTC"/>
-        <Label x:Name="VolumeCoin7" Grid.Column="2" Grid.Row="7" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin7" Grid.Column="3" Grid.Row="7" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin7" Grid.Column="4" Grid.Row="7" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails7" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="7" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin8" Grid.Column="0" Grid.Row="8" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin8" Grid.Column="1" Grid.Row="8" Content="BTC"/>
-        <Label x:Name="VolumeCoin8" Grid.Column="2" Grid.Row="8" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin8" Grid.Column="3" Grid.Row="8" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin8" Grid.Column="4" Grid.Row="8" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails8" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="8" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin9" Grid.Column="0" Grid.Row="9" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin9" Grid.Column="1" Grid.Row="9" Content="BTC"/>
-        <Label x:Name="VolumeCoin9" Grid.Column="2" Grid.Row="9" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin9" Grid.Column="3" Grid.Row="9" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin9" Grid.Column="4" Grid.Row="9" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails9" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="9" Margin="5,2,5,2"/>
-        <Label x:Name="NameCoin10" Grid.Column="0" Grid.Row="10" Content="Bitcoin"/>
-        <Label x:Name="TickerCoin10" Grid.Column="1" Grid.Row="10" Content="BTC"/>
-        <Label x:Name="VolumeCoin10" Grid.Column="2" Grid.Row="10" Content="75,191.61M"/>
-        <Label x:Name="PriceCoin10" Grid.Column="3" Grid.Row="10" Content="$23,394.07"/>
-        <Label x:Name="ChangeCoin10" Grid.Column="4" Grid.Row="10" Content="-3,59%"/>
-        <Button x:Name="ButtonDetails10" Click="Button1_ClickAsync" Content="Details" Grid.Column="5" Grid.Row="10" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin1" Grid.Column="0" Grid.Row="1" Content=""/>
+        <Label x:Name="TickerCoin1" Grid.Column="1" Grid.Row="1" Content=""/>
+        <Label x:Name="VolumeCoin1" Grid.Column="2" Grid.Row="1" Content=""/>
+        <Label x:Name="PriceCoin1" Grid.Column="3" Grid.Row="1" Content=""/>
+        <Label x:Name="ChangeCoin1" Grid.Column="4" Grid.Row="1" Content=""/>
+        <Button x:Name="ButtonDetails1" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="1" Margin="5,2,5,2" />
+        <Label x:Name="NameCoin2" Grid.Column="0" Grid.Row="2" Content=""/>
+        <Label x:Name="TickerCoin2" Grid.Column="1" Grid.Row="2" Content=""/>
+        <Label x:Name="VolumeCoin2" Grid.Column="2" Grid.Row="2" Content=""/>
+        <Label x:Name="PriceCoin2" Grid.Column="3" Grid.Row="2" Content=""/>
+        <Label x:Name="ChangeCoin2" Grid.Column="4" Grid.Row="2" Content=""/>
+        <Button x:Name="ButtonDetails2" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="2" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin3" Grid.Column="0" Grid.Row="3" Content=""/>
+        <Label x:Name="TickerCoin3" Grid.Column="1" Grid.Row="3" Content=""/>
+        <Label x:Name="VolumeCoin3" Grid.Column="2" Grid.Row="3" Content=""/>
+        <Label x:Name="PriceCoin3" Grid.Column="3" Grid.Row="3" Content=""/>
+        <Label x:Name="ChangeCoin3" Grid.Column="4" Grid.Row="3" Content=""/>
+        <Button x:Name="ButtonDetails3" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="3" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin4" Grid.Column="0" Grid.Row="4" Content=""/>
+        <Label x:Name="TickerCoin4" Grid.Column="1" Grid.Row="4" Content=""/>
+        <Label x:Name="VolumeCoin4" Grid.Column="2" Grid.Row="4" Content=""/>
+        <Label x:Name="PriceCoin4" Grid.Column="3" Grid.Row="4" Content=""/>
+        <Label x:Name="ChangeCoin4" Grid.Column="4" Grid.Row="4" Content=""/>
+        <Button x:Name="ButtonDetails4" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="4" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin5" Grid.Column="0" Grid.Row="5" Content=""/>
+        <Label x:Name="TickerCoin5" Grid.Column="1" Grid.Row="5" Content=""/>
+        <Label x:Name="VolumeCoin5" Grid.Column="2" Grid.Row="5" Content=""/>
+        <Label x:Name="PriceCoin5" Grid.Column="3" Grid.Row="5" Content=""/>
+        <Label x:Name="ChangeCoin5" Grid.Column="4" Grid.Row="5" Content=""/>
+        <Button x:Name="ButtonDetails5" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="5" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin6" Grid.Column="0" Grid.Row="6" Content=""/>
+        <Label x:Name="TickerCoin6" Grid.Column="1" Grid.Row="6" Content=""/>
+        <Label x:Name="VolumeCoin6" Grid.Column="2" Grid.Row="6" Content=""/>
+        <Label x:Name="PriceCoin6" Grid.Column="3" Grid.Row="6" Content=""/>
+        <Label x:Name="ChangeCoin6" Grid.Column="4" Grid.Row="6" Content=""/>
+        <Button x:Name="ButtonDetails6" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="6" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin7" Grid.Column="0" Grid.Row="7" Content=""/>
+        <Label x:Name="TickerCoin7" Grid.Column="1" Grid.Row="7" Content=""/>
+        <Label x:Name="VolumeCoin7" Grid.Column="2" Grid.Row="7" Content=""/>
+        <Label x:Name="PriceCoin7" Grid.Column="3" Grid.Row="7" Content=""/>
+        <Label x:Name="ChangeCoin7" Grid.Column="4" Grid.Row="7" Content=""/>
+        <Button x:Name="ButtonDetails7" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="7" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin8" Grid.Column="0" Grid.Row="8" Content=""/>
+        <Label x:Name="TickerCoin8" Grid.Column="1" Grid.Row="8" Content=""/>
+        <Label x:Name="VolumeCoin8" Grid.Column="2" Grid.Row="8" Content=""/>
+        <Label x:Name="PriceCoin8" Grid.Column="3" Grid.Row="8" Content=""/>
+        <Label x:Name="ChangeCoin8" Grid.Column="4" Grid.Row="8" Content=""/>
+        <Button x:Name="ButtonDetails8" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="8" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin9" Grid.Column="0" Grid.Row="9" Content=""/>
+        <Label x:Name="TickerCoin9" Grid.Column="1" Grid.Row="9" Content=""/>
+        <Label x:Name="VolumeCoin9" Grid.Column="2" Grid.Row="9" Content=""/>
+        <Label x:Name="PriceCoin9" Grid.Column="3" Grid.Row="9" Content=""/>
+        <Label x:Name="ChangeCoin9" Grid.Column="4" Grid.Row="9" Content=""/>
+        <Button x:Name="ButtonDetails9" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="9" Margin="5,2,5,2"/>
+        <Label x:Name="NameCoin10" Grid.Column="0" Grid.Row="10" Content=""/>
+        <Label x:Name="TickerCoin10" Grid.Column="1" Grid.Row="10" Content=""/>
+        <Label x:Name="VolumeCoin10" Grid.Column="2" Grid.Row="10" Content=""/>
+        <Label x:Name="PriceCoin10" Grid.Column="3" Grid.Row="10" Content=""/>
+        <Label x:Name="ChangeCoin10" Grid.Column="4" Grid.Row="10" Content=""/>
+        <Button x:Name="ButtonDetails10" Click="Button1_ClickAsync" Content="Details" Visibility="Hidden" Grid.Column="5" Grid.Row="10" Margin="5,2,5,2"/>
 
 
 

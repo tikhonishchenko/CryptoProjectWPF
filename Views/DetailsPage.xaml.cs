@@ -27,6 +27,10 @@ namespace CryptoProject.Views
         public async Task SetCoinAsync(string Name)
         {
             Cryptocurrency coin = await DataAccess.GetCryptocurrencyAsync(Name.ToUpper());
+            if(coin == null)
+            {
+                coin = await DataAccess.GetCryptocurrencyNameAsync(Name.ToLower());
+            }
             Label name = (Label)this.FindName("NameCoin");
             Label ticker = (Label)this.FindName("TickerCoin");
             Label volume = (Label)this.FindName("VolumeCoin");

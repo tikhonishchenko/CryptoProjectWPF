@@ -25,7 +25,19 @@ namespace CryptoProject
             }
             return cryptocurrency;
         }
-
+        public static async Task<Cryptocurrency> GetCryptocurrencyNameAsync(string name)
+        {
+            string path = "https://api.coincap.io/v2/assets/" + name;
+            CryptocurrencyObject cryptocurrency = null;
+            HttpResponseMessage response = await client.GetAsync(path);
+            if (response.IsSuccessStatusCode)
+            {
+                var parsedObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+                cryptocurrency = JsonConvert.DeserializeObject<CryptocurrencyObject>
+                    (parsedObject["data"].ToString());
+            }
+            return ToDefault(cryptocurrency);
+        }
         public static async Task<List<Cryptocurrency>> GetCryptocurrenciesAsync(int size)
         {
             string path = "https://cryptingup.com/api/assets/?size=" + size;
@@ -38,6 +50,18 @@ namespace CryptoProject
                     (parsedObject["assets"].ToString());
             }
             return cryptocurrency;
+        }
+
+        public static Cryptocurrency ToDefault(CryptocurrencyObject crypto)
+        {
+            return new Cryptocurrency
+            {
+                asset_id = crypto.symbol,
+                name = crypto.name,
+                volume_24h = crypto.volumeUsd24Hr,
+                change_24h = crypto.changePercent24Hr,
+                price = crypto.priceUsd
+            };
         }
     }
 }

@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace CryptoProject
 {
-    internal class Cryptocurrency
+    internal class CryptocurrencyObject
     {
         public string name;
-        public string asset_id;
-        public double price;
-        public double volume_24h;
-        public double change_24h;
+        public string symbol;
+        public double priceUsd;
+        public double volumeUsd24Hr;
+        public double changePercent24Hr;
         public Market[] Markets;
-
-
 
     }
 }

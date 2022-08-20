@@ -22,6 +22,7 @@ namespace CryptoProject.Views
     {
         public MainPage()
         {
+            RefreshAsync(null, null);
             InitializeComponent();
         }
 
@@ -45,6 +46,7 @@ namespace CryptoProject.Views
                 Label volume = (Label)this.FindName("VolumeCoin" + i);
                 Label price = (Label)this.FindName("PriceCoin" + i);
                 Label change = (Label)this.FindName("ChangeCoin" + i);
+                Button details = (Button)this.FindName("ButtonDetails" + i);
                 name.Content = coin.name;
                 ticker.Content = coin.asset_id;
                 volume.Content = Math.Round(coin.volume_24h / 1000000, 2) + "M";
@@ -72,6 +74,7 @@ namespace CryptoProject.Views
 
                 }
                 change.Content = Math.Round(coin.change_24h, 2) + "%";
+                details.Visibility = Visibility.Visible;
                 i++;
             }
         }

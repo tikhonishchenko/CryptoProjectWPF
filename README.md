@@ -13,12 +13,12 @@ This is a technical task for Junior C# Developer in Digital Cloud Technologies.
 4. Column which holds the price of all displayed coins.
 4. Column which holds the price change in the last 24 hr of all displayed coins.
 
-![Search page](https://imgur.com/A1dDPc4)
+![Search page](https://imgur.com/m0Sztyu)
 
 1. Text field for your search request, write ticker or full name of the coin you are looking for.
 2. Search button which navigates to the details page of the coin which name or ticker you put in the text field.
 
-![Details page](https://imgur.com/A1dDPc4)
+![Details page](https://imgur.com/PWZSAZ0)
 
 1. Name of the token.
 2. Ticker of the token.

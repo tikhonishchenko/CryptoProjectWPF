@@ -24,7 +24,11 @@ namespace CryptoProject.Views
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// opens details page and gives it name of the coin to display from search bar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Search(object sender, RoutedEventArgs e)
         {
 

@@ -24,11 +24,21 @@ namespace CryptoProject.Views
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// navigates to the main page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void MainMenu(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new MainPage());
 
         }
+        /// <summary>
+        /// Gets cryptocurrency from DataAccess class and then populates all labels with information
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
         public async Task SetCoinAsync(string Name)
         {
             Cryptocurrency coin = await DataAccess.GetCryptocurrencyAsync(Name.ToUpper());
@@ -82,6 +92,10 @@ namespace CryptoProject.Views
             }
 
         }
+        /// <summary>
+        /// Creates instance and invokes method to populate labels
+        /// </summary>
+        /// <param name="Name"></param>
         public DetailsPage(string Name)
         {
             SetCoinAsync(Name);

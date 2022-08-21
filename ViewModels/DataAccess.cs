@@ -12,6 +12,11 @@ namespace CryptoProject
     internal static class DataAccess
     {
         static HttpClient client = new HttpClient();
+        /// <summary>
+        /// Gets cryptocurrency data by its ticker from cryptingup API
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static async Task<Cryptocurrency> GetCryptocurrencyAsync(string name)
         {
             string path = "https://cryptingup.com/api/assets/" + name;
@@ -27,7 +32,11 @@ namespace CryptoProject
             }
             return cryptocurrency;
         }
-
+        /// <summary>
+        /// returns price in USDT from 3 exchanges, if there is less than 3 returns all
+        /// </summary>
+        /// <param name="asset_id"></param>
+        /// <returns></returns>
         private static async Task<List<Market>> GetExchangesAsync(string asset_id)
         {
             string[] exchanges = new string[7] { "binance", "kucoin", "kraken", "huobi", "bitfinex", "gate", "whitebit" };
@@ -60,6 +69,11 @@ namespace CryptoProject
             }
             return marketsToReturn;
         }
+        /// <summary>
+        /// Gets cryptocurrency data by its name from coincap API
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
 
         public static async Task<Cryptocurrency> GetCryptocurrencyNameAsync(string name)
         {
@@ -82,6 +96,13 @@ namespace CryptoProject
             }
             return null;
         }
+
+
+        /// <summary>
+        /// Gets 10 cryptocurrencies given by cryptingup API
+        /// </summary>
+        /// <param name="size"></param>
+        /// <returns></returns>
         public static async Task<List<Cryptocurrency>> GetCryptocurrenciesAsync(int size)
         {
             string path = "https://cryptingup.com/api/assets/?size=" + size;
@@ -95,7 +116,11 @@ namespace CryptoProject
             }
             return cryptocurrency;
         }
-
+        /// <summary>
+        /// Turns cryptocurrency from coincap API to cryptocurrency from cryptingup API
+        /// </summary>
+        /// <param name="crypto"></param>
+        /// <returns></returns>
         public static Cryptocurrency ToDefault(CryptocurrencyObject crypto)
         {
             return new Cryptocurrency

@@ -25,7 +25,11 @@ namespace CryptoProject.Views
 
             Loaded += Main_Loaded;
         }
-
+        /// <summary>
+        /// Loads main page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Main_Loaded(object sender, RoutedEventArgs e)
         {
             Frame.NavigationService.Navigate(new MainPage());

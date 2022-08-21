@@ -22,6 +22,9 @@ namespace CryptoProject.Views
     /// </summary>
     public partial class MainPage : Page
     {
+        /// <summary>
+        /// creates instance, calls method to populate labels
+        /// </summary>
         public MainPage()
         {
             RefreshAsync(null, null);
@@ -29,7 +32,11 @@ namespace CryptoProject.Views
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// opens details page and gives it name of the coin to display
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button1_ClickAsync(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
@@ -37,7 +44,11 @@ namespace CryptoProject.Views
             Label name = (Label)this.FindName("TickerCoin" + ii);
             this.NavigationService.Navigate(new DetailsPage(name.Content.ToString()));
         }
-
+        /// <summary>
+        /// refreshes all the data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void RefreshAsync(object sender, RoutedEventArgs e)
         {
             List<Cryptocurrency> cryptocurrencies = await DataAccess.GetCryptocurrenciesAsync(10);
@@ -84,7 +95,11 @@ namespace CryptoProject.Views
         }
 
       
-
+        /// <summary>
+        /// opens search page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Search(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new SearchPage());

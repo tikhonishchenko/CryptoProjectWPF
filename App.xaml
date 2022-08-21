@@ -5,7 +5,7 @@
              StartupUri="Views/Main.xaml">
     <Application.Resources>
         <Style x:Key="CustomFont">
-            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Josefin Sans">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Kanit">
                 
             </Setter>
         </Style>

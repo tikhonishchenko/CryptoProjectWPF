@@ -42,27 +42,41 @@
     <Grid Background="#000018">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-            <RowDefinition Height="0.2*" />
-
-
+            <RowDefinition Height="0.4*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24px" x:Name="placeholder" Foreground="White">No info here right now...</Label>
-        <Label x:Name="NameCoin" Grid.Row="0" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="TickerCoin" Grid.Row="1" Content="" FontSize="24px" Foreground="White" />
-        <Label x:Name="VolumeCoin" Grid.Row="2" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="PriceCoin"  Grid.Row="3" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="ChangeCoin" Grid.Row="4" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="Market1" Grid.Row="6" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="Market2" Grid.Row="7" Content="" FontSize="24px" Foreground="White"/>
-        <Label x:Name="Market3" Grid.Row="8" Content="" FontSize="24px" Foreground="White"/>
-        <Button  Template="{DynamicResource RoundedButton}"  x:Name="ButtonRefresh"  Click="MainMenu" Content="Main menu"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="650,5,20,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" HorizontalAlignment="Stretch" />
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24px" x:Name="placeholder" Foreground="White">Loading...</TextBlock>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="0">
+            <TextBlock Foreground="White" x:Name="NameCoin" Style="{ StaticResource CustomFont }" Margin="10,0,0,0" />
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="1">
+            <TextBlock x:Name="TickerCoin"   Foreground="LightGray" Margin="42,0,0,0"   Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="2">
+            <TextBlock x:Name="VolumeCoin"   Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="3">
+            <TextBlock x:Name="PriceCoin"   Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="4">
+            <TextBlock x:Name="ChangeCoin"  Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="5">
+            <TextBlock x:Name="Market1"  Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left"  Grid.Row="6" >
+            <TextBlock x:Name="Market2" Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="7">
+            <TextBlock x:Name="Market3"   Foreground="White" Margin="50,0,0,0" Style="{ StaticResource CustomFont }"/>
+        </Viewbox>
+        <Button  Template="{DynamicResource RoundedButton}"  x:Name="ButtonRefresh"  Click="MainMenu" Content="Main menu"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="0,30,20,30" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" HorizontalAlignment="Right" MinWidth="100" MinHeight="10" HorizontalContentAlignment="Center" MaxHeight="40" MaxWidth="150" />
     </Grid>
 </Page>

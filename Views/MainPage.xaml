@@ -71,6 +71,7 @@
         </StackPanel>
         <Button Template="{DynamicResource RoundedButton}" x:Name="ButtonSearch" Click="Search" Content="Search"  Style="{ StaticResource CustomFont }" Grid.Column="4" Grid.Row="0" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
 
+
         <Button  Template="{DynamicResource RoundedButton}"  x:Name="ButtonRefresh"  Click="RefreshAsync" Content="Refresh"  Style="{ StaticResource CustomFont }" Grid.Column="5" Grid.Row="0" Margin="5,5,5,5" Foreground="#ffffff" Background="#000018" BorderBrush="#FF8D41FF" />
         <Label x:Name="NameCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="0" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />
         <Label x:Name="TickerCoin1"  Style="{ StaticResource CustomFont }" Grid.Column="1" Grid.Row="1" Content="" VerticalAlignment="Center" Padding="0" Foreground="#ffffff" />

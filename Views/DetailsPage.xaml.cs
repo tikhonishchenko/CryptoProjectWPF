@@ -41,29 +41,29 @@ namespace CryptoProject.Views
             {
                 foreach (Market market in coin.Markets)
                 {
-                    Label marketLabel = (Label)this.FindName("Market" + i);
-                    marketLabel.Content = market.Name + ": 1 " + coin.asset_id + " = " + market.priceQuote + " USDT";
+                    TextBlock marketLabel = (TextBlock)this.FindName("Market" + i);
+                    market.priceQuote = Double.Parse(market.priceQuote.Replace(".", ",")).ToString();
+                    marketLabel.Text = market.Name + ": 1 " + coin.asset_id + " = " + market.priceQuote + " USDT";
                     i++;
                 }
 
-                
-                NameCoin.Content = coin.name;
-                TickerCoin.Content = coin.asset_id;
-                VolumeCoin.Content = Math.Round(coin.volume_24h / 1000000, 2) + "M";
+                NameCoin.Text =  coin.name;
+                TickerCoin.Text = coin.asset_id;
+                VolumeCoin.Text = "Volume 24h: "+Math.Round(coin.volume_24h / 1000000, 2) + "M";
                 if (coin.price > 10)
                 {
-                    PriceCoin.Content = Math.Round(coin.price, 2);
+                    PriceCoin.Text = Math.Round(coin.price, 2).ToString();
 
                 }
                 else if (coin.price > 0.001)
                 {
-                    PriceCoin.Content = Math.Round(coin.price, 5);
+                    PriceCoin.Text = Math.Round(coin.price, 5).ToString();
                 }
                 else
                 {
-                    PriceCoin.Content = Math.Round(coin.price, 10);
+                    PriceCoin.Text = Math.Round(coin.price, 10).ToString();
                 }
-                PriceCoin.Content = "$ " + PriceCoin.Content;
+                PriceCoin.Text = "Price: " + PriceCoin.Text+" $";
                 if (coin.change_24h >= 0)
                 {
                     ChangeCoin.Foreground = new SolidColorBrush(Colors.Green);
@@ -73,12 +73,12 @@ namespace CryptoProject.Views
                     ChangeCoin.Foreground = new SolidColorBrush(Colors.Red);
 
                 }
-                ChangeCoin.Content = Math.Round(coin.change_24h, 2) + "%";
-                placeholder.Content = "";
+                ChangeCoin.Text = "Price change 24h: "+Math.Round(coin.change_24h, 2) + "%";
+                placeholder.Text = "";
             }
             else
             {
-                placeholder.Content = "No coin found named: " + Name;
+                placeholder.Text = "No coin found named: " + Name;
             }
 
         }

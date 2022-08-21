@@ -104,7 +104,8 @@ namespace CryptoProject
                 name = crypto.name,
                 volume_24h = crypto.volumeUsd24Hr,
                 change_24h = crypto.changePercent24Hr,
-                price = crypto.priceUsd
+                price = crypto.priceUsd,
+                Markets = crypto.Markets
             };
         }
     }
